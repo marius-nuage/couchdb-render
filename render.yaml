@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: couchdb
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: COUCHDB_USER
+        value: admin
+      - key: COUCHDB_PASSWORD
+        value: admin123
+    autoDeploy: true
