@@ -1,11 +1,13 @@
-# Utilise l’image officielle de CouchDB
 FROM couchdb:3
 
-# Définit les variables d’environnement de base
+# Utilisateurs / mot de passe admin
 ENV COUCHDB_USER=admin
 ENV COUCHDB_PASSWORD=admin123
-ENV COUCHDB_SECRET=mysecretcookie
-ENV NODENAME=couchdb@localhost
 
-# Expose le port CouchDB
+# NODENAME facultatif pour single-node : laisser "localhost" ou ne pas le définir du tout
+ENV NODENAME=localhost
+
+# (optionnel) cookie erlang, utile en cluster mais inoffensif en single-node
+ENV COUCHDB_SECRET=mysecretcookie
+
 EXPOSE 5984
