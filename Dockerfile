@@ -1,8 +1,8 @@
 FROM couchdb:3
 
 # Utilisateurs / mot de passe admin
-ENV COUCHDB_USER=admin
-ENV COUCHDB_PASSWORD=admin123
+ENV COUCHDB_USER=clev
+ENV COUCHDB_PASSWORD=Production_1
 
 # NODENAME facultatif pour single-node : laisser "localhost" ou ne pas le définir du tout
 ENV NODENAME=localhost
