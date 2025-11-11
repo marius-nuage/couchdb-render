@@ -2,11 +2,12 @@ services:
   - type: web
     name: couchdb
     env: docker
-    plan: free
+    plan: starter
     dockerfilePath: Dockerfile
     envVars:
       - key: COUCHDB_USER
-        value: admin
+        value: clev
       - key: COUCHDB_PASSWORD
-        value: admin123
+        value: Production_1
     autoDeploy: true
+
